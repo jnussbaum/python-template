@@ -1,0 +1,24 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+	"ms-python.debugpy",
+	"visualstudioexptteam.vscodeintellicode",
+        "njpwerner.autodocstring",
+	"redhat.vscode-xml",
+        "zainchen.json",
+        "grapecity.gc-excelviewer",
+	"mechatroner.rainbow-csv",
+        "tamasfe.even-better-toml",
+	"github.copilot",
+	"github.copilot-chat",
+	"github.vscode-pull-request-github",
+	"eamodio.gitlens",
+	"valentjn.vscode-ltex",
+	"matangover.mypy",
+        "humao.rest-client",
+	"charliermarsh.ruff",
+	"sourcery.sourcery",
+	"qcz.text-power-tools",
+    ]
+}
