@@ -1,0 +1,91 @@
+[tool.poetry]
+name = "your-pkg"
+version = "0.1.0"
+description = "Add a description here"
+authors = ["Johannes Nussbaum <johannes.nussbaum@dasch.swiss>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+loguru = "^0.7.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+mypy = "^1.10.0"
+ruff = "^0.4.5"
+pre-commit = "^3.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+# see https://docs.pytest.org/en/latest/explanation/goodpractices.html#tests-outside-application-code
+
+
+[tool.mypy]
+show_column_numbers = true
+strict = true
+enable_error_code = ["possibly-undefined"]
+
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+
+[tool.ruff.lint]
+select = [
+    "RUF",      # ruff-specific rules
+    "PL",       # pylint
+    "I",        # isort
+    "E",        # pycodestyle errors
+    "F",        # pyflakes
+    "A",        # flake8-builtins
+    "BLE",      # flake8-blind-except
+    "ARG",      # flake8-unused-arguments
+    "S",        # flake8-bandit plugin which checks for security issues
+    "YTT",      # flake8-2020 plugin, which checks for misuse of `sys.version` or `sys.version_info`
+    "ASYNC",    # flake8-async plugin, which checks for bad async / asyncio practices
+    "ISC",      # flake8-implicit-str-concat plugin, which checks for problematic string concatenation
+    "INP",      # flake8-no-pep420 plugin, which checks for missing __init__.py files
+    "PIE",      # flake8-pie plugin, which does miscellaneous checks
+    "PT",       # flake8-pytest-style plugin
+    "TID",      # flake8-tidy-imports plugin
+    "ICN",      # flake8-import-conventions plugin, which checks for import conventions
+    "ARG",      # flake8-unused-arguments
+    "PGH",      # pygrep-hooks: A collection of fast, cheap, regex based pre-commit hooks
+    "UP031",    # pyupgrade: printf-string-formatting
+    "D101",     # pydocstyle: undocumented-public-class
+    "D102",     # pydocstyle: undocumented-public-method
+    "D103",     # pydocstyle: undocumented-public-function
+    "D417",     # pydocstyle: undocumented-param
+    "B023",     # flake8-bugbear: function-uses-loop-variable
+]
+ignore = [
+    "ISC001",   # flake8-implicit-str-concat: single-line-implicit-string-concatenation  # incompatible with the formatter
+    "S603",     # flake8-bandit: subprocess-without-shell-equals-true
+]
+
+
+[tool.ruff.lint.per-file-ignores]
+"test/*" = [
+    "D103",     # pydocstyle: undocumented-public-function
+    "D102",     # pydocstyle: undocumented-public-method
+    "D101",     # pydocstyle: undocumented-public-class
+    "S101",     # flake8-bandit: use of assert
+]
+
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+
+[tool.ruff.lint.isort]
+force-single-line = true
+known-first-party = ["your_pkg"]
