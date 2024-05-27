@@ -1,6 +1,7 @@
 {
     "[python]": {
-        "diffEditor.ignoreTrimWhitespace": true
+        "diffEditor.ignoreTrimWhitespace": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
     },
     "editor.rulers": [
         120

@@ -80,9 +80,6 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "test/*" = [
-    "D103",     # pydocstyle: undocumented-public-function
-    "D102",     # pydocstyle: undocumented-public-method
-    "D101",     # pydocstyle: undocumented-public-class
     "S101",     # flake8-bandit: use of assert
 ]
 

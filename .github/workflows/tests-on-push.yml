@@ -24,12 +24,12 @@ jobs:
       - name: Linting with mypy
         run: poetry run mypy .
 
-  unittests:
+  tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout dsp-tools repo
+      - name: Checkout repo
         uses: actions/checkout@v4
       - name: Install poetry, python, and dependencies
         uses: ./.github/actions/setup
       - name: unittests
-        run: poetry run pytest tests/unittests/
+        run: poetry run pytest tests/
