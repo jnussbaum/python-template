@@ -3,7 +3,7 @@
 Replace `your-pkg` / `your_pkg` at these places:
 
 - `pyproject.toml` (2 x)
-- directory `src/your_pkg`
+- directory `src/your_pkg` (via IDE refactoring - it is used in the code)
 
 
 ## Quick Start
