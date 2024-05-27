@@ -48,6 +48,7 @@ select = [
     "F",        # pyflakes
     "A",        # flake8-builtins
     "BLE",      # flake8-blind-except
+    "B",        # flake8-bugbear plugin finding likely bugs and design problems 
     "ARG",      # flake8-unused-arguments
     "S",        # flake8-bandit plugin which checks for security issues
     "YTT",      # flake8-2020 plugin, which checks for misuse of `sys.version` or `sys.version_info`
@@ -59,13 +60,17 @@ select = [
     "TID",      # flake8-tidy-imports plugin
     "ICN",      # flake8-import-conventions plugin, which checks for import conventions
     "ARG",      # flake8-unused-arguments
+    "FBT",      # flake8-boolean-trap plugin which checks for boolean positional arguments
+    "SIM",      # flake8-simplify plugin which checks for simplifiable statements
+    "PTH",      # flake8-use-pathlib plugin which checks for old style usage of os that can be replaced with pathlib
     "PGH",      # pygrep-hooks: A collection of fast, cheap, regex based pre-commit hooks
-    "UP031",    # pyupgrade: printf-string-formatting
-    "D101",     # pydocstyle: undocumented-public-class
-    "D102",     # pydocstyle: undocumented-public-method
-    "D103",     # pydocstyle: undocumented-public-function
-    "D417",     # pydocstyle: undocumented-param
-    "B023",     # flake8-bugbear: function-uses-loop-variable
+    "UP",       # pyupgrade
+    "C90",      # mccabe
+    "N",        # pep8-naming
+    "PD",       # pandas-vet: checks for common pandas mistakes
+    "TRY",      # tryceratops: Prevent Exception Handling AntiPatterns
+    "PERF",     # perflint: A Linter for performance anti-patterns
+    "FURB",     # refurb: A tool for refurbish and modernize Python codebases
 ]
 ignore = [
     "ISC001",   # flake8-implicit-str-concat: single-line-implicit-string-concatenation  # incompatible with the formatter
