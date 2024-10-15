@@ -1,26 +1,27 @@
-[tool.poetry]
+[project]
 name = "your-pkg"
 version = "0.1.0"
 description = "Add a description here"
-authors = ["Johannes Nussbaum <johannes.nussbaum@dasch.swiss>"]
+authors = [{name = "Johannes Nussbaum", email = "johannes.nussbaum@dasch.swiss"}]
 readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "loguru>=0.7.2",
+]
 
 
-[tool.poetry.dependencies]
-python = "^3.12"
-loguru = "^0.7.2"
-
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.2.1"
-mypy = "^1.10.0"
-ruff = "^0.4.5"
-pre-commit = "^3.7.0"
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.2.1",
+    "mypy>=1.11.2",
+    "ruff>=0.6.9",
+    "pre-commit>=3.8.0",
+]
 
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 
 [tool.pytest.ini_options]

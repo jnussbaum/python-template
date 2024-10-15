@@ -9,9 +9,8 @@ Replace `your-pkg` / `your_pkg` at these places:
 ## Quick Start
 
 ```bash
-curl -sSL https://install.python-poetry.org | python3 -
-poetry self add poetry-exec-plugin
-poetry install
-poetry shell
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv sync --all-extras --dev
+source .venv/bin/activate
 pre-commit install
 ```
