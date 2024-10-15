@@ -18,11 +18,11 @@ jobs:
       - name: Install uv, python, and dependencies
         uses: ./.github/actions/setup
       - name: Linting with ruff
-        run: uvx ruff check . --output-format=github
+        run: uv run ruff check . --output-format=github
       - name: Check formatting with ruff
-        run: uvx ruff format --check .
+        run: uv run ruff format --check .
       - name: Linting with mypy
-        run: uvx mypy .
+        run: uv run mypy .
 
   tests:
     runs-on: ubuntu-latest
@@ -32,4 +32,4 @@ jobs:
       - name: Install uv, python, and dependencies
         uses: ./.github/actions/setup
       - name: unittests
-        run: uvx pytest tests/
+        run: uv run pytest tests/
