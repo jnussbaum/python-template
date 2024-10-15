@@ -80,7 +80,7 @@ ignore = [
 
 
 [tool.ruff.lint.per-file-ignores]
-"test/*" = [
+"tests/*" = [
     "S101",     # flake8-bandit: use of assert
 ]
 
