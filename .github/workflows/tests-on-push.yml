@@ -15,21 +15,21 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-      - name: Install poetry, python, and dependencies
+      - name: Install uv, python, and dependencies
         uses: ./.github/actions/setup
       - name: Linting with ruff
-        run: poetry run ruff check . --output-format=github
+        run: uv run ruff check . --output-format=github
       - name: Check formatting with ruff
-        run: poetry run ruff format --check .
+        run: uv run ruff format --check .
       - name: Linting with mypy
-        run: poetry run mypy .
+        run: uv run mypy .
 
   tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-      - name: Install poetry, python, and dependencies
+      - name: Install uv, python, and dependencies
         uses: ./.github/actions/setup
       - name: unittests
-        run: poetry run pytest tests/
+        run: uv run pytest tests/
