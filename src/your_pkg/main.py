@@ -8,7 +8,6 @@ def main() -> None:
     logger.info("Hello, world!")
 
 
-
 if __name__ == "__main__":
     logger_config()
     main()
