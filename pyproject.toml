@@ -37,7 +37,6 @@ enable_error_code = ["possibly-undefined"]
 
 [tool.ruff]
 line-length = 120
-target-version = "py312"
 
 
 [tool.ruff.lint]
