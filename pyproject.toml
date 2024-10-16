@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Add a description here"
 authors = [{name = "Johannes Nussbaum", email = "johannes.nussbaum@dasch.swiss"}]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 dependencies = [
     "loguru>=0.7.2",
 ]
